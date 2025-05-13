@@ -1,0 +1,96 @@
+:root {
+  --color-background: #f4f4f4;
+  --color-text: #333333;
+
+  --color-link-text: #0075c3;
+}
+
+body {
+  font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
+  background-color: var(--color-background);
+  color: var(--color-text);
+}
+
+a {
+  color: var(--color-link-text);
+  text-decoration: none;
+}
+
+a:hover {
+  opacity: 0.8;
+  border-bottom: var(--color-link-text) 1px dashed;
+}
+
+code {
+  font-family: ui-monospace, "Roboto Mono", "Menlo", "Consolas", monospace;
+}
+
+.about-me {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+}
+
+figure {
+  text-align: center;
+  margin: 0px;
+}
+
+figure img {
+  width: 192px;
+  height: 192px;
+  box-shadow: #aaa 4px 4px 10px -3px;
+  border-width: 1px;
+  border-style: solid;
+  border-color: #aaa;
+  border-image: initial;
+  border-radius: 5px;
+}
+
+h1 {
+  text-align: center;
+}
+
+.container {
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+@media (min-width: 768px) {
+  .container {
+    width: 750px;
+  }
+
+  .about-me {
+    flex-direction: row;
+    gap: 2em;
+  }
+}
+
+@media (min-width: 992px) {
+  .container {
+    width: 970px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .container {
+    width: 1170px;
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  figure img {
+    box-shadow: #555 4px 4px 10px -3px;
+    border-color: #aaa;
+  }
+
+  :root {
+    --color-background: #1e1e1e;
+    --color-text: #ffffff;
+
+    --color-link-text: #71b5e0;
+  }
+}
